@@ -8,8 +8,22 @@
       h1 {
         color: palevioletred;
       }
+      .bg-pink{
+        background-color: hotpink;
+      }
+      .bold{
+        font-weight: 700;
+      }
+      .size{
+        font-size: 3em;
+      }
       #food-t {
         color: brown;
+        /* background-color: coral; */
+      }
+
+      .foods .love {
+        font-weight: 800;
       }
     </style>
   </head>
@@ -18,17 +32,22 @@
       <h1>I am trying to get over the pain</h1>
     </header>
     <main>
-      <section>
+      <section id="canva" class="colors">
         <h1>Welcome to my DOM</h1>
+        <p>
+          The topic feels hard <span>Feeling nervous</span> and its
+          <span>full</span> of new info.
+        </p>
+        <h1>My color <span>Lalala</span> collection</h1>
         <ul>
           <li>white</li>
           <li>red</li>
           <li class="love">black</li>
-          <li>blue</li>
+          <li class="aura">blue</li>
         </ul>
       </section>
       <!-- food -->
-      <section>
+      <section class="foods">
         <h1 id="food-t">Foods i like</h1>
         <ul>
           <li>Pizza</li>
@@ -71,6 +90,12 @@
       const favorThings = document.getElementsByClassName("love");
       for (let things of favorThings) {
         console.log(things.innerText);
+      }
+
+      // query selectior
+      const spanEle = document.querySelectorAll("#canva p span");
+      for (const span of spanEle) {
+        console.log(span.innerText);
       }
     </script>
     <script src="js/hello.js"></script>
