@@ -8,6 +8,9 @@
       h1 {
         color: palevioletred;
       }
+      #food-t {
+        color: brown;
+      }
     </style>
   </head>
   <body>
@@ -15,13 +18,27 @@
       <h1>I am trying to get over the pain</h1>
     </header>
     <main>
-      <h1>Welcome to my DOM</h1>
-      <ul>
-        <li>white</li>
-        <li>red</li>
-        <li>black</li>
-        <li>blue</li>
-      </ul>
+      <section>
+        <h1>Welcome to my DOM</h1>
+        <ul>
+          <li>white</li>
+          <li>red</li>
+          <li class="love">black</li>
+          <li>blue</li>
+        </ul>
+      </section>
+      <!-- food -->
+      <section>
+        <h1 id="food-t">Foods i like</h1>
+        <ul>
+          <li>Pizza</li>
+          <li>Coffee</li>
+          <li id="foood">Burger</li>
+          <li class="love">CheeseCake</li>
+          <li class="love">Pasta</li>
+          <li class="love">Spicey food</li>
+        </ul>
+      </section>
     </main>
     <script>
       //   console.log("hello everyone");
@@ -30,18 +47,30 @@
         name: " Abul ali",
         id: 20,
         study: function (subject) {
-          console.log("study subject:", subject);
+          // console.log("study subject:", subject);
         },
       };
       const collection = document.getElementsByTagName("li");
       console.log(collection);
       for (const li of collection) {
-        console.log(li.innerText);
+        // console.log(li.innerText);
       }
       //   h1 tags
       const headings = document.getElementsByTagName("h1");
       for (const heading of headings) {
-        console.log(heading.innerText);
+        // console.log(heading.innerText);
+      }
+      // element by id
+      const foodHead = document.getElementById("food-t");
+      console.log(foodHead.innerText);
+
+      const favFood = document.getElementById("foood");
+      favFood.innerText = "coffee is love";
+      //  element by class
+
+      const favorThings = document.getElementsByClassName("love");
+      for (let things of favorThings) {
+        console.log(things.innerText);
       }
     </script>
     <script src="js/hello.js"></script>
