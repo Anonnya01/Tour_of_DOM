@@ -8,14 +8,14 @@ h1.innerText = "things I love";
 const ul = document.createElement("ul");
 
 const li1 = document.createElement("li");
-li1.innerText ="cats";
-ul.appendChild(li1)
+li1.innerText = "cats";
+ul.appendChild(li1);
 
 const li2 = document.createElement("li");
-li2.innerText ="food";
-ul.appendChild(li2)
+li2.innerText = "food";
+ul.appendChild(li2);
 const li3 = document.createElement("li");
-li3.innerText ="quran";
+li3.innerText = "quran";
 
 // append
 
@@ -23,4 +23,17 @@ mainContainer.appendChild(placeSection);
 placeSection.appendChild(h1);
 placeSection.appendChild(ul);
 
-ul.appendChild(li3)
+ul.appendChild(li3);
+
+// easy way
+
+const booksSec = document.createElement("section");
+
+booksSec.innerHTML = `
+<h1>books i read</h1>
+<ul>
+  <li>si-fi</li>
+  <li>story</li>
+</ul>
+`;
+mainContainer.appendChild(booksSec);
