@@ -4,17 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tour of DOM</title>
+    <link rel="stylesheet" href="style.css" />
     <style>
       h1 {
         color: palevioletred;
       }
-      .bg-pink{
+      .bg-pink {
         background-color: hotpink;
       }
-      .bold{
+      .bold {
         font-weight: 700;
       }
-      .size{
+      .size {
         font-size: 3em;
       }
       #food-t {
@@ -31,7 +32,7 @@
     <header>
       <h1>I am trying to get over the pain</h1>
     </header>
-    <main>
+    <main id="main">
       <section id="canva" class="colors">
         <h1>Welcome to my DOM</h1>
         <p>
@@ -58,6 +59,16 @@
           <li class="love">Spicey food</li>
         </ul>
       </section>
+      <!-- player -->
+      <section id="players-cont">
+        <h1>Players list</h1>
+        <ul id="player-list">
+          <li>Messi</li>
+          <li>Kaka</li>
+          <li>Ronaldo</li>
+          <li>Pele</li>
+        </ul>
+      </section>
     </main>
     <script>
       //   console.log("hello everyone");
@@ -70,7 +81,7 @@
         },
       };
       const collection = document.getElementsByTagName("li");
-      console.log(collection);
+      // console.log(collection);
       for (const li of collection) {
         // console.log(li.innerText);
       }
@@ -81,7 +92,7 @@
       }
       // element by id
       const foodHead = document.getElementById("food-t");
-      console.log(foodHead.innerText);
+      // console.log(foodHead.innerText);
 
       const favFood = document.getElementById("foood");
       favFood.innerText = "coffee is love";
@@ -89,15 +100,18 @@
 
       const favorThings = document.getElementsByClassName("love");
       for (let things of favorThings) {
-        console.log(things.innerText);
+        // console.log(things.innerText);
       }
 
       // query selectior
       const spanEle = document.querySelectorAll("#canva p span");
       for (const span of spanEle) {
-        console.log(span.innerText);
+        // console.log(span.innerText);
       }
     </script>
     <script src="js/hello.js"></script>
+    <script src="js/cssInJs.js"></script>
+    <script src="js/child.js"></script>
+    <script src="js/append.js"></script>
   </body>
 </html>
